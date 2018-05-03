@@ -32,6 +32,12 @@
 
 `git push --set-upstream origin <branch_name>`
 
+## List all branches on local and remote
+
+`git branch -a`
+
+But first run `git remote update --prune origin` to update your local branch list with all new ones from the remote and remove any that are no longer there.
+
 ## Remove branch
 
 * Local:
