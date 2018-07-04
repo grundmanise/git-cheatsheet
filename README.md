@@ -184,3 +184,9 @@ If some application (for instance, LessJS compiler) messes with line endings, gi
 To get rid of it, one has to open git config file and add this setting:
 
 `autocrlf = true`
+
+## Apply .gitignore globally
+
+Useful for ignoring machine/IDE-specific stuff (.DS_Store for OS X, .idea/ for WebStorm, .vscode/ for VS Code, *.swp for vim and so on):
+
+`git config --global core.excludesfile ~/.gitignore`
