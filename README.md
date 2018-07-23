@@ -119,6 +119,16 @@ Stuff from `master` is now in feature branch, and `master` itself was resetted t
 
 Instead of `master`, of course, you might use `some/other-branch`.
 
+## Applying changes from branch by path
+
+Scenario: you need to apply some selected changes from branch A to your current branch B. These changes are scattered between multiple commits, so cherry picking is not an option.
+
+You can selectevely apply changes for files from branch A with:
+
+`git checkout <sourcebranch> -- <pathspec>`
+
+(https://stackoverflow.com/a/1355990/4541800)
+
 ## Restoring deleted local file
 
 First, don’t panic, the data is still there.
