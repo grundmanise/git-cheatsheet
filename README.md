@@ -62,6 +62,12 @@ But first run `git remote update --prune origin` to update your local branch lis
 
 `git branch | grep -v "master" | xargs git branch -D`
 
+## Remove local branches that have been already merged to master
+
+`git branch --merged origin/master | xargs git branch -d`
+
+> First command gives a list of all your local branches that have been merged into your master branch
+
 ## Stashing
 
 Comes handy if you want to change branch without committing current stuff.
@@ -200,3 +206,9 @@ To get rid of it, one has to open git config file and add this setting:
 Useful for ignoring machine/IDE-specific stuff (.DS_Store for OS X, .idea/ for WebStorm, .vscode/ for VS Code, *.swp for vim and so on):
 
 `git config --global core.excludesfile ~/.gitignore`
+
+## Cleanup unnecessary files and optimize a local repository
+
+`git-gc`
+
+>Users are encouraged to run this task on a regular basis within each repository to maintain good disk space utilization and good operating performance
